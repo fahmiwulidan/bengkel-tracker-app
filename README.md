@@ -1,61 +1,69 @@
-# bengkel-tracker
-Bengkel Tracker's Repository with Geographic Information System and Payment Gateway Integration
+<div align="center">
 
+  <h1>Bengkel Tracker App</h1>
+  <p><b>Platform Sistem Informasi Geografis & Manajemen Pelacakan Layanan Bengkel</b></p>
 
-## Do & Don't
-1. Do: Gunakan ```.gitignore``` agar file ```.env``` tidak ter-upload.
-2. Do: Selalu ```git pull``` sebelum membuat branch baru.
-3. Don't: Melakukan ```git push --force``` karena bisa menghapus kerjaan teman.
+  [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+  [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
 
+  <br />
 
-## Workflow Harian (Lakukan ini setiap kali ingin melanjutkan progress)
+  [Laporkan Bug](https://github.com/fahmiwulidan/bengkel-tracker-app/issues) •
+  [Minta Fitur](https://github.com/fahmiwulidan/bengkel-tracker-app/issues)
+
+</div>
+
+---
+
+## Ringkasan Proyek
+
+**Bengkel Tracker App** adalah aplikasi *mobile cross-platform* yang dirancang untuk mempermudah pelacakan status perbaikan kendaraan, pemantauan posisi mekanik secara *real-time*, serta pengelolaan transaksi perbengkelan secara terintegrasi[cite: 19]. Aplikasi ini memadukan teknologi Sistem Informasi Geografis (SIG/GIS) dan gerbang pembayaran (*payment gateway*) untuk memberikan pengalaman layanan yang cepat, transparan, dan terpercaya[cite: 19].
+
+> [!NOTE]
+> Aplikasi ini dikembangkan menggunakan framework **Flutter** berbasis bahasa pemrograman **Dart** yang mendukung deployment multi-platform (Android, iOS, Web, & Desktop)[cite: 18, 19].
+
+---
+
+## Teknologi Utama
+
+| Layer | Teknologi | Deskripsi |
+| :--- | :--- | :--- |
+| **Framework** | Flutter | Development framework multi-platform untuk antarmuka pengguna yang responsif[cite: 19] |
+| **Language** | Dart | Bahasa pemrograman utama logika aplikasi & state management[cite: 19] |
+| **GIS & Tracking** | Google Maps API / Reverb WebSocket | Fitur pelacakan lokasi mekanik & pemetaan posisi secara *real-time*[cite: 19, 21] |
+| **Payment Gateway** | Payment API Integration | Pemrosesan transaksi & pembayaran digital yang aman[cite: 19] |
+
+---
+
+## Fitur Unggulan
+
+- **Pelacakan Posisi Mekanik (Real-Time GIS)** — Pemantauan lokasi mekanik dan kendaraan secara presisi berbasis peta interaktif[cite: 19].
+- **Integrasi Payment Gateway** — Kemudahan pembayaran tagihan servis kendaraan melalui berbagai metode pembayaran digital[cite: 19].
+- **Komunikasi Real-Time (WebSocket/Reverb)** — Fitur pesan/obrolan langsung dan pembaruan status perbaikan secara *real-time*.
+- **Multi-Platform Support** — Kompatibilitas penuh untuk dijalankan pada perangkat Android, iOS, maupun Web[cite: 18, 19].
+
+---
+
+## Aturan Pengerjaan Proyek (Do & Don't)
+
+- **Gunakan `.gitignore`** — Pastikan berkas sensitif seperti `.env` tidak terunggah ke repositori[cite: 19].
+- **Selalu Sinkronisasi** — Lakukan `git pull` sebelum membuat *branch* baru[cite: 19].
+- **Hindari Forced Push** — Dilarang melakukan `git push --force` karena dapat menimpa dan menghapus riwayat pekerjaan anggota tim[cite: 19].
+
+---
+
+## Alur Kerja Pengembangan (Git Workflow)
+
 ### 1. Sinkronisasi Awal
-#### Pindah ke branch develop
-```git checkout develop```
-#### Ambil kode terbaru dari server
-```git pull origin develop```
+Pindah ke branch `develop` dan ambil pembaruan kode terbaru dari repositori server:
+```bash
+git checkout develop
+git pull origin develop
+```
 
-### 2. Membuat Branch Baru
-#### Buat dan pindah ke branch baru
-- Opsi: feat, fix, docs, ui (Gunakan huruf kecil semua)
-- Feature: ```git checkout -b feat/nama-fitur```
-  - Contoh: ```feat/chat-realtime```, ```feat/tracking-mekanik```
-- Fix bug: ```git checkout -b fix/masalah```
-  - Contoh: ```fix/kalkulasi-biaya```, ```fix/login-error```
-- Dokumentasi: ```git checkout -b docs/nama-dokumen```
-  - Contoh: ```docs/readme-install```, ```docs/api-spec```
-- UI:  ```git checkout -b ui/nama-halaman```
-  - Contoh: ```ui/dashboard-admin```, ```ui/sidebar-mekanik```
+---
 
-### 3. Commit Perubahan
-#### Cek file yang berubah
-```git status```
-#### Tambahkan file ke area staging
-```git add .```
-#### Simpan dengan pesan yang jelas
-```git commit -m "feat: menambah integrasi websocket Reverb untuk tracking"```
-
-### 4. Push ke Github
-#### Push branch ke origin
-```git push origin feat/nama-fitur```
-
-### 5. Membuat Pull Request
-#### a. Buka repositori di GitHub.
-#### b. Klik tombol Compare & pull request.
-#### c. Pilih base: *develop* <- *compare: feat/nama-fitur*.
-#### d. Tulis deskripsi singkat apa yang kamu ubah.
-#### e. Review code oleh project manager.
-
-### 6. Pembersihan (Setelah Merge)
-#### Kembali ke branch develop
-```git checkout develop```
-#### Pull dari branch develop
-```git pull origin develop```
-#### Hapus branch feature/fix/docs/ui yang sebelumnya digunakan
-```git branch -d feat/nama-fitur```
-
-
-## Jika Terjadi Conflict (Dilakukan oleh Project Manager)
-### 1. Buka file yang bermasalah di VS Code.
-### 2. Pilih perubahan yang ingin diambil (Accept Current / Incoming).
-### 3. Simpan file, lalu: *git add .* -> *git commit -m "fix: resolve merge conflict"* -> *git push*.
+<div align="center">
+  <sub>Dikembangkan dengan ❤️ oleh <a href="https://github.com/fahmiwulidan">Fahmi Wulidan</a></sub>
+</div>
